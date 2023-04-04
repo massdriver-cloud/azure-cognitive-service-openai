@@ -56,33 +56,12 @@ Form input parameters for configuring a bundle for deployment.
 <!-- PARAMS:START -->
 ## Properties
 
-- **`foo`** *(string)*: Name of azure-cognitive-service-openai. Default: ``.
-
-  Examples:
-  ```json
-  "US-West 2 VPC"
-  ```
-
-  ```json
-  "US-East 1 VPC"
-  ```
-
-## Examples
-
-  ```json
-  {
-      "__name": "Development",
-      "foo": "bar"
-  }
-  ```
-
-  ```json
-  {
-      "__name": "Production",
-      "foo": "foo"
-  }
-  ```
-
+- **`service`** *(object)*: To use the OpenAI service, you **must** be approved by Azure first. More details [here](https://azure.microsoft.com/en-us/products/cognitive-services/openai-service).
+  - **`region`** *(string)*: The region where the OpenAI service will be deployed.
+    - **One of**
+      - East US
+      - South Central US
+      - West Europe
 <!-- PARAMS:END -->
 
 </details>
@@ -97,6 +76,31 @@ Connections from other bundles that this bundle depends on.
 <!-- CONNECTIONS:START -->
 ## Properties
 
+- **`azure_service_principal`** *(object)*: . Cannot contain additional properties.
+  - **`data`** *(object)*
+    - **`client_id`** *(string)*: A valid UUID field.
+
+      Examples:
+      ```json
+      "123xyz99-ab34-56cd-e7f8-456abc1q2w3e"
+      ```
+
+    - **`client_secret`** *(string)*
+    - **`subscription_id`** *(string)*: A valid UUID field.
+
+      Examples:
+      ```json
+      "123xyz99-ab34-56cd-e7f8-456abc1q2w3e"
+      ```
+
+    - **`tenant_id`** *(string)*: A valid UUID field.
+
+      Examples:
+      ```json
+      "123xyz99-ab34-56cd-e7f8-456abc1q2w3e"
+      ```
+
+  - **`specs`** *(object)*
 <!-- CONNECTIONS:END -->
 
 </details>
@@ -111,6 +115,41 @@ Resources created by this bundle that can be connected to other bundles.
 <!-- ARTIFACTS:START -->
 ## Properties
 
+- **`endpoint`** *(object)*: . Cannot contain additional properties.
+  - **`data`** *(object)*
+    - **`infrastructure`** *(object)*
+      - **`ari`** *(string)*: Azure Resource ID.
+
+        Examples:
+        ```json
+        "/subscriptions/12345678-1234-1234-abcd-1234567890ab/resourceGroups/resource-group-name/providers/Microsoft.Network/virtualNetworks/network-name"
+        ```
+
+      - **`endpoint`** *(string)*: An HTTPS endpoint URL.
+
+        Examples:
+        ```json
+        "https://example.com/some/path"
+        ```
+
+        ```json
+        "https://massdriver.cloud"
+        ```
+
+    - **`security`** *(object)*: Azure Security Configuration. Cannot contain additional properties.
+      - **`iam`** *(object)*: IAM Roles And Scopes. Cannot contain additional properties.
+        - **`^[a-z]+[a-z_]*[a-z]$`** *(object)*
+          - **`role`**: Azure Role.
+
+            Examples:
+            ```json
+            "Storage Blob Data Reader"
+            ```
+
+          - **`scope`** *(string)*: Azure IAM Scope.
+  - **`specs`** *(object)*
+    - **`azure`** *(object)*: .
+      - **`region`** *(string)*: Select the Azure region you'd like to provision your resources in.
 <!-- ARTIFACTS:END -->
 
 </details>
