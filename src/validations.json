@@ -1,0 +1,5 @@
+{
+    "do_not_delete": [
+        "module.cognitive_services"
+    ]
+}
