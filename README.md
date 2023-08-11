@@ -57,7 +57,6 @@ Form input parameters for configuring a bundle for deployment.
   - **`region`** *(string)*: The region where the OpenAI service will be deployed.
     - **One of**
       - East US
-      - South Central US
       - West Europe
 <!-- PARAMS:END -->
 
