@@ -34,7 +34,7 @@ params:
               const: japaneast
             - title: North Central US
               const: northcentralus
-            - title: South Central US (Unavailable)
+            - title: South Central US (Currently unavailable)
               const: southcentralus
             - title: UK South
               const: uksouth
