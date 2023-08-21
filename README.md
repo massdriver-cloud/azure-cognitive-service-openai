@@ -56,7 +56,13 @@ Form input parameters for configuring a bundle for deployment.
 - **`service`** *(object)*: To use the OpenAI service, you **must** be approved by Azure first. More details [here](https://azure.microsoft.com/en-us/products/cognitive-services/openai-service).
   - **`region`** *(string)*: The region where the OpenAI service will be deployed.
     - **One of**
+      - Australia East
+      - Canada East
       - East US
+      - East US 2
+      - Japan East
+      - North Central US
+      - UK South
       - West Europe
 <!-- PARAMS:END -->
 
