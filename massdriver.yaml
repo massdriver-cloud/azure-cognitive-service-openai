@@ -24,8 +24,6 @@ params:
           oneOf:
             - title: East US
               const: eastus
-            - title: South Central US
-              const: southcentralus
             - title: West Europe
               const: westeurope
 
