@@ -62,7 +62,7 @@ Form input parameters for configuring a bundle for deployment.
       - East US 2
       - Japan East
       - North Central US
-      - South Central US (Unavailable)
+      - South Central US (Currently unavailable)
       - UK South
       - West Europe
 <!-- PARAMS:END -->
