@@ -60,9 +60,10 @@ Form input parameters for configuring a bundle for deployment.
       - Canada East
       - East US
       - East US 2
+      - France Central
       - Japan East
       - North Central US
-      - South Central US (Currently unavailable)
+      - South Central US (No capacity available)
       - UK South
       - West Europe
 <!-- PARAMS:END -->
