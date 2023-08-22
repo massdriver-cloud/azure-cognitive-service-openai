@@ -30,11 +30,13 @@ params:
               const: eastus
             - title: East US 2
               const: eastus2
+            - title: France Central
+              const: francecentral
             - title: Japan East
               const: japaneast
             - title: North Central US
               const: northcentralus
-            - title: South Central US (Currently unavailable)
+            - title: South Central US (No capacity available)
               const: southcentralus
             - title: UK South
               const: uksouth
