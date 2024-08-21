@@ -4,11 +4,8 @@ Azure Cognitive Service OpenAI enables users to integrate advanced language unde
 
 ### Design Decisions
 
-- **Service Naming**: The module requires a naming prefix (`name_prefix`) for resource identification.
-- **Location**: You must specify the geographical region (`location`) where the service will be deployed.
 - **Kind**: This module is specifically designed for OpenAI (`kind = "OpenAI"`).
 - **SKU Tier**: The SKU tier (`sku_name`) defaults to `S0`, which balances cost and performance.
-- **Tags**: Resource tags (`default_tags`) are mandatory for organizational purposes and tracking.
 
 ### Runbook
 
