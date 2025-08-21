@@ -1,7 +1,6 @@
 resource "massdriver_artifact" "endpoint" {
-  field                = "endpoint"
-  provider_resource_id = module.cognitive_services.account_id
-  name                 = "Azure Cognitive Service OpenAI ${module.cognitive_services.account_name}"
+  field    = "endpoint"
+  name     = "Azure Cognitive Service OpenAI ${module.cognitive_services.account_name}"
   artifact = jsonencode(
     {
       data = {
