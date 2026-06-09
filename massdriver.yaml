@@ -42,16 +42,16 @@ params:
             const: westeurope
 connections:
   required:
-  - azure_service_principal
+  - azure_authentication
   properties:
-    azure_service_principal:
-      "$ref": massdriver/azure-service-principal
+    azure_authentication:
+      "$ref": azure-service-principal
 artifacts:
   required:
   - endpoint
   properties:
     endpoint:
-      "$ref": massdriver/azure-cognitive-service-openai
+      "$ref": azure-cognitive-service-openai
 ui:
   ui:order:
   - service
